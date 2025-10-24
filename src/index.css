@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* 8Point Brand Colors - All HSL */
+    --brand-brown: 18 82% 18%;        /* #4F200D */
+    --brand-orange: 35 100% 50%;      /* #FF9A00 */
+    --brand-yellow: 48 100% 62%;      /* #FFD93D */
+    --brand-beige: 40 50% 95%;        /* #F6F1E9 */
+    
+    /* Semantic Color System */
+    --background: 255 100% 100%;         /* Brand beige */
+    --foreground: 18 82% 18%;         /* Brand brown */
+
+    --card: 0 0% 100%;
+    --card-foreground: 18 82% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 18 82% 18%;
+
+    --primary: 35 100% 50%;           /* Brand orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 100% 62%;         /* Brand yellow */
+    --secondary-foreground: 18 82% 18%;
+
+    --muted: 40 30% 90%;
+    --muted-foreground: 18 40% 40%;
+
+    --accent: 35 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 48 100% 62%;
+    --warning-foreground: 18 82% 18%;
+
+    --border: 40 30% 85%;
+    --input: 40 30% 90%;
+    --ring: 35 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar specific */
+    --sidebar-background: 18 82% 18%;
+    --sidebar-foreground: 40 50% 95%;
+    --sidebar-primary: 35 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 18 70% 25%;
+    --sidebar-accent-foreground: 40 50% 95%;
+    --sidebar-border: 18 70% 25%;
+    --sidebar-ring: 35 100% 50%;
+    --classic-button-background: 18 82% 18%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(79 32 13 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(79 32 13 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(79 32 13 / 0.15);
+    --shadow-glow: 0 0 20px rgb(255 154 0 / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 18 82% 10%;
+    --foreground: 40 50% 95%;
+
+    --card: 18 70% 15%;
+    --card-foreground: 40 50% 95%;
+
+    --popover: 18 70% 15%;
+    --popover-foreground: 40 50% 95%;
+
+    --primary: 35 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 100% 62%;
+    --secondary-foreground: 18 82% 18%;
+
+    --muted: 18 60% 20%;
+    --muted-foreground: 40 30% 70%;
+
+    --accent: 35 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 18 60% 25%;
+    --input: 18 60% 20%;
+    --ring: 35 100% 50%;
+    
+    --sidebar-background: 18 82% 12%;
+    --sidebar-foreground: 40 50% 95%;
+    --sidebar-primary: 35 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 18 70% 20%;
+    --sidebar-accent-foreground: 40 50% 95%;
+    --sidebar-border: 18 70% 20%;
+    --sidebar-ring: 35 100% 50%;
+    --classic-button-background: 35 100% 50%;
+  }
+}
+
+.bg-sidebar {
+  background-image: url(../images/overlay.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position: fixed;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.classic-button-background{
+  background-color: hsl(var(--classic-button-background));
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* Transparent, minimal scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Transparent track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Brand-colored thumb */
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary) / 0.35);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary) / 0.55);
+}
+
+/* Corner (when both scrollbars visible) */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox support */
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.4) transparent;
+  transition: scrollbar-color 0.3s ease;
+}
+
+/* Slight highlight on hover for body */
+body:hover {
+  scrollbar-color: hsl(var(--primary) / 0.6) transparent;
+}
+
+/* Dark mode variant */
+.dark ::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary) / 0.25);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary) / 0.45);
+}
+
+
+
