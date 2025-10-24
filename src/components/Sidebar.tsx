@@ -1,43 +1,15 @@
 import { NavLink } from "react-router-dom";
 import {
-  ShoppingCart,
   CreditCard,
-  Wallet,
-  GraduationCap,
-  Store,
-  Brain,
-  MessageSquare,
   LayoutDashboard,
   Settings,
+  Users,
+  Building2,
+  Key,
   ChevronLeft,
   ChevronRight,
   ChevronDown,
-  Receipt,
-  BarChart3,
-  Users,
-  Package,
-  BookOpen,
-  ClipboardList,
-  Sparkles,
-  MessagesSquare,
-  Shield,
-  Crown,
-  Grid3x3,
-  PackageOpen,
-  Percent,
-  Building2,
-  RotateCcw,
-  History,
-  Layers,
-  FileText,
-  Facebook,
   LogOut as SignOut,
-  CreditCard as PaymentIcon,
-  Briefcase,
-  Target,
-  Send,
-  Filter,
-  DollarSign,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -54,120 +26,12 @@ interface SidebarProps {
 }
 
 const menuItems = [
-  // 🏠 MAIN
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
-  { title: "Plans", url: "/plans", icon: Crown },
-
-  // 🚀 MODULES
-  {
-    title: "Wallet",
-    url: "/wallet",
-    icon: CreditCard,
-    submenu: [
-      { title: "Balance", url: "/wallet", icon: Wallet },
-      { title: "Transactions", url: "/pay", icon: Receipt },
-      { title: "Invoices", url: "/pay/invoices", icon: ClipboardList },
-      { title: "Bill Payments", url: "/pay/bill-payments", icon: FileText },
-      
-    ],
-  },
-  {
-    title: "POS",
-    url: "/pos",
-    icon: ShoppingCart,
-    submenu: [
-      { title: "Sales", url: "/pos", icon: Receipt },
-      { title: "Sales History", url: "/pos/sales-history", icon: History },
-      { title: "Returns", url: "/pos/returns", icon: RotateCcw },
-      { title: "Discounts", url: "/pos/discounts", icon: Percent },
-      { title: "Products", url: "/pos/products", icon: Package },
-      { title: "Product Types", url: "/pos/product-types", icon: Layers },
-      { title: "Categories", url: "/pos/categories", icon: Grid3x3 },
-      { title: "Inventory", url: "/pos/inventory", icon: PackageOpen },
-      { title: "Purchases", url: "/pos/purchases", icon: PackageOpen },
-      { title: "Customers", url: "/pos/customers", icon: Users },
-      { title: "Suppliers", url: "/pos/suppliers", icon: Building2 },
-      { title: "Reports", url: "/pos/reports", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "E-Commerce",
-    url: "/store",
-    icon: Store,
-    submenu: [
-      { title: "Products", url: "/store", icon: Package },
-      { title: "Orders", url: "/store/orders", icon: ShoppingCart },
-      { title: "Analytics", url: "/store/analytics", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "LMS",
-    url: "/lms",
-    icon: GraduationCap,
-    submenu: [
-      { title: "Courses", url: "/lms", icon: BookOpen },
-      { title: "Students", url: "/lms/students", icon: Users },
-      { title: "Progress", url: "/lms/progress", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "AI",
-    url: "/ai",
-    icon: Brain,
-    submenu: [
-      { title: "Insights", url: "/ai", icon: Sparkles },
-      { title: "Automations", url: "/ai/automations", icon: Settings },
-    ],
-  },
-  {
-    title: "Chat",
-    url: "/chat",
-    icon: MessageSquare,
-    submenu: [
-      { title: "Messages", url: "/chat", icon: MessagesSquare },
-      { title: "Channels", url: "/chat/channels", icon: MessageSquare },
-    ],
-  },
-  {
-    title: "CRM",
-    url: "/marketing",
-    icon: Target,
-    submenu: [
-      { title: "Campaigns", url: "/marketing", icon: Send },
-      { title: "Leads", url: "/marketing/leads", icon: Users },
-      { title: "Funnels", url: "/marketing/funnels", icon: Filter },
-      { title: "Analytics", url: "/marketing/analytics", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "Accounting",
-    url: "/accounting",
-    icon: Briefcase,
-    submenu: [
-      { title: "Invoices", url: "/accounting", icon: ClipboardList },
-      { title: "Payroll", url: "/accounting/payroll", icon: DollarSign },
-      { title: "Expenses", url: "/accounting/expenses", icon: Receipt },
-      { title: "Reports", url: "/accounting/reports", icon: BarChart3 },
-    ],
-  },
-
-  // ⚙️ SETTINGS
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: Settings,
-    submenu: [
-      { title: "General", url: "/settings", icon: Settings },
-      { title: "Users & Roles", url: "/settings/users", icon: Users },
-      { title: "Security", url: "/settings/security", icon: Shield },
-      { title: "Integrations", url: "/settings/integrations", icon: Facebook },
-      {
-        title: "Payment Gateways",
-        url: "/settings/payment-gateways",
-        icon: PaymentIcon,
-      },
-    ],
-  },
+  { title: "Dashboard", url: "/admin/dashboard", icon: LayoutDashboard },
+  { title: "Tenants", url: "/admin/tenants", icon: Building2 },
+  { title: "Users", url: "/admin/users", icon: Users },
+  { title: "Plans & Billing", url: "/admin/plans", icon: CreditCard },
+  { title: "API Keys", url: "/admin/api", icon: Key },
+  { title: "Settings", url: "/admin/settings", icon: Settings },
 ];
 
 
